@@ -14,9 +14,10 @@ This tuturial shows you how to compile llvm and clang, and how to run a simple l
 The repo already has both llvm and repo, so you can directly go build it.
 
 ```bash
+$ cd LLVM-helloworld
 $ cd build
 $ cmake -G "Unix Makefiles" ../llvm # you might need to use cmake3, if your cmake is cmake 2.x
-$ make
+$ make -j4 # assume you have at least 4 cores, this takes 5 mins or so
 ```
 
 Try clang (assume you are still in build/):
@@ -24,7 +25,7 @@ Try clang (assume you are still in build/):
 ```bash
 $ ./bin/clang --help
 $ ./bin/clang hello/hello.c -o hello/hello  # compile the C file into a native executable
-$ ./bin/clang -O3 -emit-llvm hello.c -c -o hello.bc  # compile the C file into an LLVM bitcode file
+$ ./bin/clang -O3 -emit-llvm hello/hello.c -c -o hello/hello.bc  # compile the C file into an LLVM bitcode file
 ```
 
 Run the program in both forms
@@ -42,13 +43,13 @@ Go to directory llvm-pass-skeleton/
 $ cd ../llvm-pass-skeleton
 $ mkdir build
 $ cd build
-$ LLVM_DIR=../llvm/build/lib/cmake/llvm/ cmake ..
+$ LLVM_DIR=../../build/lib/cmake/llvm/ cmake .. # use cmake3 if your cmake is cmake 2.x
 $ make  # build the pass.
 ```
 
 ```bash
-$ cd ..  # go to project root directory
-$ llvm/build/bin/clang -Xclang -load -Xclang llvm-pass-skeleton/build/skeleton/libSkeletonPass.* build/hello/hello.c
+$ cd ../..  # go to project root directory
+$ ./build/bin/clang -Xclang -load -Xclang llvm-pass-skeleton/build/skeleton/libSkeletonPass.* ./build/hello/hello.c
 I saw a function called main!
 ```
 
