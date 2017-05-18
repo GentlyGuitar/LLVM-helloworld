@@ -1,4 +1,4 @@
-The simplest llvm tutorial you can ever find on Internet!
+**The simplest llvm tutorial you can ever find on Internet!**
 
 This tuturial shows you how to compile llvm and clang, and how to run a simple llvm pass.
 
@@ -6,9 +6,9 @@ The repo already has both llvm and repo, so you can directly go build it.
 
 ## Build Clang
 
-`$ cd build`
-`$ cmake -G "Unix Makefiles" ../llvm # you might need to use `cmake3`, if your cmake is cmake 2.x`
-`$ make`
+`$ cd build
+$ cmake -G "Unix Makefiles" ../llvm # you might need to use `cmake3`, if your cmake is cmake 2.x
+$ make`
 
 Try clang (assume you are still in build/):
 
