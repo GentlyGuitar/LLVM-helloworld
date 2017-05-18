@@ -32,7 +32,7 @@ Run the program in both forms
 
 ```bash
 $ ./hello/hello
-$ ./bin/lli ./hello/hello.bc
+$ ./bin/lli ./hello/hello.bc # invoke the LLVM JIT
 ```
 
 ## Write a Simple Pass
@@ -53,7 +53,7 @@ $ ./build/bin/clang -Xclang -load -Xclang llvm-pass-skeleton/build/skeleton/libS
 I saw a function called main!
 ```
 
-That -Xclang -load -Xclang path/to/lib.so dance is all you need to load and activate your pass in Clang.
+That `-Xclang -load -Xclang path/to/lib.so` is all you need to load and activate your pass in Clang.
 
 Congrats! You've just hacked a compiler! 
 
