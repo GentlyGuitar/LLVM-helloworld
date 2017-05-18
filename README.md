@@ -6,29 +6,34 @@ The repo already has both llvm and repo, so you can directly go build it.
 
 ## Build Clang
 
-`$ cd build
-
+```bash
+$ cd build
 $ cmake -G "Unix Makefiles" ../llvm # you might need to use `cmake3`, if your cmake is cmake 2.x
-
-$ make`
+$ make
+```
 
 Try clang (assume you are still in build/):
 
-`$ ./bin/clang --help'
-`$ ./bin/clang hello/hello.c -o hello/hello  # compile the C file into a native executable`
-`$ ./bin/clang -O3 -emit-llvm hello.c -c -o hello.bc  # compile the C file into an LLVM bitcode file`
+```bash
+$ ./bin/clang --help
+$ ./bin/clang hello/hello.c -o hello/hello  # compile the C file into a native executable
+$ ./bin/clang -O3 -emit-llvm hello.c -c -o hello.bc  # compile the C file into an LLVM bitcode file
+```
 
 Run the program in both forms
 
-`$ ./hello/hello`
-`$ ./bin/lli ./hello/hello.bc`
+```bash
+$ ./hello/hello
+$ ./bin/lli ./hello/hello.bc
+```
 
 ## Write a Simple Pass
 
 Go to directory llvm-pass-skeleton/
 
-`$ cd ../llvm-pass-skeleton`
-``
+```bash
+$ cd ../llvm-pass-skeleton
+```
 
 ## Credit
 
