@@ -7,7 +7,9 @@ The repo already has both llvm and repo, so you can directly go build it.
 ## Build Clang
 
 `$ cd build
+
 $ cmake -G "Unix Makefiles" ../llvm # you might need to use `cmake3`, if your cmake is cmake 2.x
+
 $ make`
 
 Try clang (assume you are still in build/):
