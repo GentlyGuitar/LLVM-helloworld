@@ -1,10 +1,10 @@
-**The simplest llvm tutorial you can ever find on Internet!**
+### The simplest llvm tutorial you can ever find on Internet!
 
 This tuturial shows you how to compile llvm and clang, and how to run a simple llvm pass.
 
 The repo already has both llvm and repo, so you can directly go build it.
 
-## Build Clang
+## Build Clang and LLVM
 
 ```bash
 $ cd build
