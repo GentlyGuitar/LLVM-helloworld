@@ -2,6 +2,13 @@
 
 This tuturial shows you how to compile llvm and clang, and how to run a simple llvm pass, **all in one minute**.
 
+## Prerequisites
+
+- GNU Make        3.79, 3.79.1    Makefile/build processor
+- GCC >=4.8.0     C/C++           compiler1
+- python          >=2.7           Automated test suite2
+- zlib            >=1.2.3.4       Compression library3
+
 ## Build Clang and LLVM
 
 The repo already has both llvm and repo, so you can directly go build it.
